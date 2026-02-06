@@ -2,7 +2,7 @@
 
 ## Software
 
-Line chart created with Python and matplotlib (polars for data cleaning).
+Line chart created with R using tidyverse and ggplot2.
 
 ## Intended Audience
 
@@ -18,7 +18,7 @@ Line charts are the standard way to show change over time, so I used one here to
 
 ## Reproducibility
 
-The code is in a Jupyter notebook and pulls data directly from Toronto Open Data's public API (using their guided instructions). The rate calculation (averaging across all 158 neighbourhoods for each year) is documented in the code. Anyone with the modules installed from the `uv.lock` should be able to download the data and remake the chart end-to-end.
+The code is in a standalone R script (`visualization_2.R`) that reads the CSV data downloaded via the Jupyter notebook from Toronto Open Data's public API. The rate calculation (averaging across all 158 neighbourhoods for each year) is documented in the script. Anyone with R and the tidyverse package installed can run the script to regenerate the chart.
 
 ## Accessibility
 
@@ -30,8 +30,8 @@ Assault disproportionately affects certain communities, and rising rates may cau
 
 ## Feature Selection
 
-Assault is the most common crime type in the dataset, making the trend more. I used rates per 100,000 rather than raw counts to account for population differences across neighbourhoods (which have been aggregated together here). The 2019-2024 window captures pre-pandemic, pandemic, and post-pandemic years.
+Assault is the most common crime type in the dataset. I used rates per 100,000 rather than raw counts to account for population differences across neighbourhoods (which have been aggregated together here). The 2019-2024 window captures pre-pandemic, pandemic, and post-pandemic years.
 
 ## Underwater Labour
 
-The "invisible labour" in this chart includes police officers who filed assault reports, Statistics Canada staff who produce population estimates, City of Toronto employees who maintain the Open Data portal, and the developers of matplotlib and polars.
+The "invisible labour" in this chart includes police officers who filed assault reports, Statistics Canada staff who produce population estimates, City of Toronto employees who maintain the Open Data portal, and the developers of R, tidyverse, and ggplot2.
